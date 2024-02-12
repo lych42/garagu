@@ -1,20 +1,46 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garage V. Parrot</title>
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('build/bootstrap.min.css') }}">
 
-{% block title %}Hello HomepageController!{% endblock %}
-
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/laragon/www/Garagu/src/Controller/HomepageController.php'|file_link(0) }}">src/Controller/HomepageController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/laragon/www/Garagu/templates/homepage/index.html.twig'|file_link(0) }}">templates/homepage/index.html.twig</a></code></li>
-    </ul>
-</div>
-{% endblock %}
+</head>
+<body>
+    <header>
+        <h1>Garage V. Parrot</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Nos Services</a></li>
+                <li><a href="#vehicles">Véhicules d'occasion</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="services">
+        <h2>Nos Services</h2>  
+    </section>
+    <section id="vehicles">
+        <h2>Véhicules d'occasion</h2>
+       
+    </section>
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Nom" required>
+            <input type="text" id="email" placeholder="E-mail" required>
+            <input type="tel" id="phone" placeholder="Téléphone" required>
+            <textarea id="message" placeholder="Message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+    <footer>
+        <div class="contact-info">
+           
+        </div>
+        <!-- Lien vers les médias sociaux -->
+    </footer>
+</body>
+</html>
