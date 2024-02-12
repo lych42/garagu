@@ -33,3 +33,59 @@
 .main-header .header-right nav ul li a:hover {
     color: #000; /* Couleur des liens au survol */
 }
+
+/* Styles pour la section des services */
+.services-section {
+    background-color: #D9777F; /* Fond blanc */
+    padding: 50px 0;
+}
+
+.services-section .container {
+    max-width: 800px; /* Largeur maximale de la section */
+    margin: 0 auto; /* Centrer la section */
+}
+
+.service {
+    margin-bottom: 30px;
+}
+
+.service h3 {
+    color: #333; /* Couleur du titre */
+}
+
+.service p {
+    color: #666; /* Couleur de la description */
+}
+
+/* Styles pour le footer */
+.main-footer {
+    background-color: #333; /* Couleur de fond du footer */
+    color: #fff; /* Couleur du texte */
+    padding: 20px 0;
+}
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Largeur maximale du footer */
+    margin: 0 auto; /* Centrer le footer */
+}
+
+.footer-logo img {
+    max-height: 40px; /* Ajustez la hauteur du logo selon vos besoins */
+}
+
+.footer-address p {
+    margin: 0;
+}
+
+.footer-schedule,
+.footer-contact-form {
+    text-align: right;
+}
+
+.footer-schedule h4,
+.footer-contact-form h4 {
+    margin-top: 0;
+}
