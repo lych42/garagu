@@ -1,0 +1,35 @@
+/* Styles pour le header */
+.main-header {
+    background-color: #f8f9fa; /* Blanc ou crème */
+    padding: 10px 0;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .header-left img {
+    max-height: 40px; /* Ajustez la hauteur du logo selon vos besoins */
+}
+
+.main-header .header-right nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header .header-right nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.main-header .header-right nav ul li a {
+    text-decoration: none;
+    color: #333; /* Couleur des liens */
+}
+
+.main-header .header-right nav ul li a:hover {
+    color: #000; /* Couleur des liens au survol */
+}
