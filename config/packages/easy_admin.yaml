@@ -1,0 +1,17 @@
+# config/packages/easy_admin.yaml
+easy_admin:
+  design:
+    menu:
+      - { entity: 'Vehicle', label: 'Vehicles' }
+      # Ajoutez d'autres entités ici si nécessaire
+  entities:
+    Vehicle:
+      class: App\Entity\Vehicle
+      form:
+        fields:
+          - { property: 'brand' }
+          - { property: 'model' }
+          - { property: 'year' }
+          - { property: 'mileage' }
+          - { property: 'price' }
+          - { property: 'imageFile', type: 'VichUploaderType', label: 'Image' }
