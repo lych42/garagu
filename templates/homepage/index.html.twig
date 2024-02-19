@@ -22,7 +22,7 @@
             <div class="header-right">
                 <nav>
                     <ul>
-                        <li><a href="services-section">Services</a></li>
+                        <li><a href="#services-section">Services</a></li>
                         <li><a href="{{ path('app_vehicule') }}">Véhicules</a></li>
                         <li><a href="{{ path('app_vehicule') }}">Contact</a></li>
                         <li><a href="{{ path('app_register') }}">Connexion</a></li>
@@ -38,7 +38,7 @@
 
     {# Services #}
     <h2 style="text-align: center">Nos Services</h2>
-     <div class="services-section"> 
+     <div id="services-section"> 
             <div class="service">
                 {% for service in services %}
                 <h3>{{ service.name }}</h3>
@@ -48,22 +48,23 @@
      </div>
 
     {# Véhicules d'occasion #}
-    <div class="véhicules-liste">
-     <div class="container">
-           <button>Voir la liste de nos véhicules d'occasion</button>
-        </div>
+    <div style="text-align: center">
+        <button>Voir la liste de nos véhicules d'occasion</button>
     </div>
 
     {# Avis #}
-    <div class="comment">
-        <div class="last-comment">
-            Ici, on pourra voir les trois derniers commentaires
+    <div class="column" style="text-align: center">
+        <div>
+            <h4>Nom de l'utilisateur</h4>
+            <p>ci, on pourra voir les trois derniers commentaires</p>
         </div>
-        <div class="last-comment">
-            Ici, on pourra voir les trois derniers commentaires
+        <div>
+            <h4>Nom de l'utilisateur</h4>
+           <p> Ici, on pourra voir les trois derniers commentaires</p>
         </div>
-        <div class="last-comment">
-            Ici, on pourra voir les trois derniers commentaires
+        <div>
+            <h4>Nom de l'utilisateur</h4>
+            <p>Ici, on pourra voir les trois derniers commentaires</p>
         </div>
     </div>
 
@@ -94,7 +95,6 @@
 
 </body>
 </html>
-
 
 {% endblock %}
 
