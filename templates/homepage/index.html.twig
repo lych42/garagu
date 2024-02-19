@@ -84,7 +84,12 @@
             </div>
             <div class="footer-schedule">
                 <h4>Horaires</h4>
-                <!-- Afficher les horaires en fonction de votre entité Schedule -->
+                <ul>
+                    {% for horaire in horaires %}
+                    <li>{{horaire.jour}} : {{horaire.heureOuverture}}  </li>
+                    {% endfor %}
+                </ul>
+                
             </div>
             <div class="footer-contact-form">
                 <h4>Nous Contacter</h4>
