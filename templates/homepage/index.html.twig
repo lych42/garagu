@@ -17,14 +17,14 @@
     <header class="main-header">
         <div class="container">
             <div class="header-left">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo Garage V. Parrot">
+                <p>Garage V. Perrot</p>
             </div>
             <div class="header-right">
                 <nav>
                     <ul>
-                        <li><a href="#services-section">Services</a></li>
+                        <li><a href="services-section">Services</a></li>
                         <li><a href="{{ path('app_vehicule') }}">Véhicules</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="{{ path('app_vehicule') }}">Contact</a></li>
                         <li><a href="{{ path('app_register') }}">Connexion</a></li>
                     </ul>
                 </nav>
@@ -33,25 +33,19 @@
     </header>
 
     {# Image de voiture #}
+    <img src="https://www.comprendrelautomobile.com/wp-content/uploads/2021/07/reparer-sa-voiture-soi-meme.jpg" />
+
 
     {# Services #}
+    <h2 style="text-align: center">Nos Services</h2>
      <div class="services-section"> 
-        <div class="container">
-            <h2>Nos Services</h2>
             <div class="service">
-                <h3>Réparation mécanique générale</h3>
-                <p>Confiez la réparation et l'entretien de votre véhicule à notre équipe de mécaniciens experts pour garantir son bon fonctionnement et sa sécurité sur la route.</p>
+                {% for service in services %}
+                <h3>{{ service.name }}</h3>
+                <p>{{ service.content }}
+                {% endfor %}
             </div>
-            <div class="service">
-                <h3>Réparation de la carrosserie</h3>
-                <p>Nous sommes spécialisés dans la réparation de tous types de dommages de carrosserie, des petites éraflures aux dommages de collision majeurs, pour redonner à votre voiture son aspect d'origine.</p>
-            </div>
-            <div class="service">
-                <h3>Entretien régulier</h3>
-                <p>Préservez la performance et la durabilité de votre véhicule grâce à nos services d'entretien régulier, y compris la vidange d'huile, la vérification des freins, la rotation des pneus et bien plus encore.</p>
-            </div>
-        </div>
-    </div>
+     </div>
 
     {# Véhicules d'occasion #}
     <div class="véhicules-liste">
