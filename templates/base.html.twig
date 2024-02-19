@@ -7,6 +7,25 @@
     </head>
     <body>
         {% block body %}
+
+        <header class="main-header">
+        <div class="container">
+            <div class="header-left">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo Garage V. Parrot">
+            </div>
+            <div class="header-right">
+                <nav>
+                    <ul>
+                        <li><a href="#services-section">Services</a></li>
+                        <li><a href="{{ path('app_vehicule') }}">Véhicules</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="{{ path('app_register') }}">Connexion</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
         <footer>
         <div class="container">
             <div class="footer-logo">

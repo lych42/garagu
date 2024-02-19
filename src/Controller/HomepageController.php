@@ -2,11 +2,10 @@
 
 namespace App\Controller;
 
-use App\Repository\HorairesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Entity\Horaires;
+use App\Repository\HorairesRepository;
 
 class HomepageController extends AbstractController
 {
