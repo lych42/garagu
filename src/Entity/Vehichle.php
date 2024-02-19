@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\VehichleRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 #[ORM\Entity(repositoryClass: VehichleRepository::class)]
 class Vehichle
