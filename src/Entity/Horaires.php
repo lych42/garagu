@@ -17,11 +17,11 @@ class Horaires
     #[ORM\Column(length: 255)]
     private ?string $jour = null;
 
-    #[ORM\Column(type: Types::TIME_MUTABLE)]
-    private ?\DateTimeInterface $heure_ouverture = null;
+    #[ORM\Column(length: 255)]
+    private ?string $heureOuverture = null;
 
-    #[ORM\Column(type: Types::TIME_MUTABLE)]
-    private ?\DateTimeInterface $heure_fermeture = null;
+    #[ORM\Column(length: 255)]
+    private ?string $heureFermeture = null;
 
     public function getId(): ?int
     {
@@ -40,27 +40,28 @@ class Horaires
         return $this;
     }
 
-    public function getHeureOuverture(): ?\DateTimeInterface
+    public function getHeureOuverture(): ?string
     {
-        return $this->heure_ouverture;
+        return $this->heureOuverture;
     }
 
-    public function setHeureOuverture(\DateTimeInterface $heure_ouverture): self
+    public function setHeureOuverture(string $heureOuverture): self
     {
-        $this->heure_ouverture = $heure_ouverture;
+        $this->heureOuverture = $heureOuverture;
 
         return $this;
     }
 
-    public function getHeureFermeture(): ?\DateTimeInterface
+    public function getHeureFermeture(): ?string
     {
-        return $this->heure_fermeture;
+        return $this->heureFermeture;
     }
 
-    public function setHeureFermeture(\DateTimeInterface $heure_fermeture): self
+    public function setHeureFermeture(string $heureFermeture): self
     {
-        $this->heure_fermeture = $heure_fermeture;
+        $this->heureFermeture = $heureFermeture;
 
         return $this;
     }
+    
 }
