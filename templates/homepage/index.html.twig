@@ -85,8 +85,9 @@
             <div class="footer-schedule">
                 <h4>Horaires</h4>
                 <ul>
-                  <li>
-                  </li>
+                  {% for horaire in horaires %}
+                  <li>{{ horaire.jour }} : {{horaire.heureOuverture}} / {{horaire.heureFermeture}}</li>
+                  {% endfor %}
                 </ul>
 
             </div>
