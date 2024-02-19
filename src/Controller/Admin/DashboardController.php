@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Service;
+use App\Entity\Horaires;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -29,5 +30,6 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Services', 'fas fa-list', Service::class);
+        yield MenuItem::linkToCrud('Horaires', 'fas fa-list', Horaires::class);
     }
 }
