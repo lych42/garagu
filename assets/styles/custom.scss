@@ -89,3 +89,25 @@
 .footer-contact-form h4 {
     margin-top: 0;
 }
+
+/* Styles pour centrer le formulaire d'inscription */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hauteur de la vue à 100% */
+}
+
+.form-content {
+    max-width: 400px; /* Largeur maximale du contenu du formulaire */
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-content h1 {
+    text-align: center;
+}
+
