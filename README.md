@@ -8,7 +8,7 @@ Pour installer et exécuter l'application localement, vous devez disposer des pr
     Symfony 8.2.3
     PHP 8.2.0
     Composer
-    WampServer(Apache&SQL)
+    Laragon
     Github
     Nodejs et npm
 
