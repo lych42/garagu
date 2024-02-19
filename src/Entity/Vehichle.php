@@ -27,16 +27,6 @@ class Vehichle
     #[ORM\Column(length: 255)]
     private ?string $mileage = null;
 
-    // NOTE : 
-    #[Vich\UploadableField(mapping: 'voitures_images', fileNameProperty: 'path', size: 'size')]
-    private ?File $imageFile = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $imageName = null;
-
-    #[ORM\Column(nullable: true)]
-    private ?\DateTimeImmutable $updatedAt = null;
-
     public function getId(): ?int
     {
         return $this->id;
@@ -86,34 +76,6 @@ class Vehichle
     public function setMileage(string $mileage): self
     {
         $this->mileage = $mileage;
-
-        return $this;
-    }
-
-    public function setImageFile(?File $imageFile = null): void
-    {
-        $this->imageFile = $imageFile;
-
-        if (null !== $imageFile) {
-            // It is required that at least one field changes if you are using doctrine
-            // otherwise the event listeners won't be called and the file is lost
-            $this->updatedAt = new \DateTimeImmutable();
-        }
-    }
-
-    public function getImageFile(): ?File
-    {
-        return $this->imageFile;
-    }
-
-    public function getImageName(): ?string
-    {
-        return $this->imageName;
-    }
-
-    public function setImageName(string $imageName): self
-    {
-        $this->imageName = $imageName;
 
         return $this;
     }
