@@ -1,3 +1,9 @@
+/* Styles pour l'ensemble' */
+a:hover {
+    text-decoration: none;
+    color: #D9777F;
+}
+
 /* Styles pour le header */
 .main-header {
     background-color: #f8f9fa; /* Blanc ou crème */
@@ -34,6 +40,16 @@
     color: #000; /* Couleur des liens au survol */
 }
 
+.main-header a {
+    text-decoration: none;
+    color: black;
+}
+
+.main-header a:hover {
+    text-decoration: none;
+    color: #D9777F;
+}
+
 /* Styles pour la section des services */
 .services-section {
     background-color: #D9777F; /* Fond blanc */
@@ -64,6 +80,11 @@ footer {
     padding: 20px 0;
 }
 
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -90,9 +111,6 @@ footer {
     margin-top: 0;
 }
 
-
-
-
 /* Styles pour centrer le formulaire d'inscription */
 .form-container {
     display: flex;
@@ -114,3 +132,12 @@ footer {
     text-align: center;
 }
 
+.vitrine {
+    width: 100%; /* Assurez-vous que la div parent occupe toute la largeur disponible */
+    overflow: hidden; /* Masquer le débordement de l'image si nécessaire */
+}
+
+.vitrine-image {
+    max-width: 100%; /* L'image s'adaptera à la largeur de son conteneur parent */
+    height: auto; /* Assurez-vous que la hauteur s'ajuste proportionnellement à la largeur */
+}

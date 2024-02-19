@@ -33,16 +33,17 @@
     </header>
 
     {# Image de voiture #}
-    <img src="https://www.comprendrelautomobile.com/wp-content/uploads/2021/07/reparer-sa-voiture-soi-meme.jpg" />
-
+    <div class="vitrine">
+        <img class="vitrine-image" src="https://www.turbo.fr/sites/default/files/2022-06/voiture%20reparation%20moindre%20cout.jpeg" />
+    </div>
 
     {# Services #}
-    <h2 style="text-align: center">Nos Services</h2>
-     <div id="services-section"> 
+    <div id="services-section">
+        <h2 style="text-align: center">Nos Services</h2>
             <div class="service">
                 {% for service in services %}
-                <h3>{{ service.name }}</h3>
-                <p>{{ service.content }}
+                <h3 style="text-align: center">{{ service.name }}</h3>
+                <p style="text-align: center">{{ service.content }}
                 {% endfor %}
             </div>
      </div>
@@ -72,7 +73,7 @@
     <footer>
         <div class="container">
             <div class="footer-logo">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo Garage V. Parrot">
+                <p>Garage V. Parrot</p>
             </div>
             <div class="footer-address">
                 <p>123 Rue de la Réparation<br>Toulouse</p>
@@ -87,8 +88,7 @@
 
             </div>
             <div class="footer-contact-form">
-                <h4>Nous Contacter</h4>
-                <!-- Mini formulaire de contact ici -->
+                <h4><a href="{{ path('app_contact') }}">Nous Contacter</h4>
             </div>
         </div>
     </footer>
