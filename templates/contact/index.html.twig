@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContactController!{% endblock %}
+
+{% block body %}
+
+<header class="main-header">
+        <div class="container">
+            <div class="header-left">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo Garage V. Parrot">
+            </div>
+            <div class="header-right">
+                <nav>
+                    <ul>
+                        <li><a href="#services-section">Services</a></li>
+                        <li><a href="{{ path('app_vehicule') }}">Véhicules</a></li>
+                        <li><a href="{{ path('app_contact') }}">Contact</a></li>
+                        <li><a href="{{ path('app_register') }}">Connexion</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo Garage V. Parrot">
+            </div>
+            <div class="footer-address">
+                <p>123 Rue de la Réparation<br>Toulouse</p>
+            </div>
+            <div class="footer-schedule">
+                <h4>Horaires</h4>
+                <ul>
+                  {% for horaire in horaires %}
+                  <li>{{ horaire.jour }} : {{horaire.heureOuverture}} / {{horaire.heureFermeture}}</li>
+                  {% endfor %}
+                </ul>
+
+            </div>
+            <div class="footer-contact-form">
+                <h4><a>Nous Contacter</a></h4>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
