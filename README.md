@@ -29,6 +29,10 @@ Installez les dépendances en exécutant la commande suivante dans le répertoir
     npm install 
     npm run build
 
+Installez la base de données avec la commande 
+
+    symfony console d:m:m
+
 Lancer le serveur web 
 
 Enfin, lancez l'application Symfony avec la commande suivante :
