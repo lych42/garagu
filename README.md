@@ -40,4 +40,8 @@ Enfin, lancez l'application Symfony avec la commande suivante :
 
     symfony serve-d
 
+Se rendre dans la partie admin pour ajouter ou modifier des données : 
+
+    rajouter un /admin sur l'url afin d'accéder à la partie administration
+
 
