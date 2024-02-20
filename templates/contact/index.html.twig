@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ContactController!{% endblock %}
+{% block title %}Formulaire de contact{% endblock %}
 
 {% block body %}
 
@@ -20,29 +20,61 @@
         </div>
 </header>
 
-    <main>
-    </main>
+<main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
 
-    <footer>
-        <div class="container">
-            <div class="footer-logo">
-                <p>Garage V. Parrot</p>
-            </div>
-            <div class="footer-address">
-                <p>123 Rue de la Réparation<br>Toulouse</p>
-            </div>
-            <div class="footer-schedule">
-                <h4>Horaires</h4>
-                <ul>
-                  {% for horaire in horaires %}
-                  <li>{{ horaire.jour }} : {{horaire.heureOuverture}} / {{horaire.heureFermeture}}</li>
-                  {% endfor %}
-                </ul>
-
-            </div>
-            <div class="footer-contact-form">
-                <h4><a>Nous Contacter</a></h4>
-            </div>
+<body>
+<div class="container mt-5">
+    <h1>Contactez-nous</h1>
+    <form action="submit_contact.php" method="POST">
+        <div class="form-group">
+            <label for="name">Nom :</label>
+            <input type="text" class="form-control" id="name" name="name" required>
         </div>
-    </footer>
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message :</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+    </form>
+</div>
+
+</body>
+</html>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-logo">
+               <p>Garage V. Parrot</p>
+         </div>
+        <div class="footer-address">
+            <p>123 Rue de la Réparation<br>Toulouse</p>
+        </div>
+          <div class="footer-schedule">
+            <h4>Horaires</h4>
+              <ul>
+                 {% for horaire in horaires %}
+              <li>{{ horaire.jour }} : {{horaire.heureOuverture}} / {{horaire.heureFermeture}}</li>
+                {% endfor %}
+              </ul>
+
+           </div>
+          <div class="footer-contact-form">
+              <h4><a>Nous Contacter</a></h4>
+           </div>
+     </div>
+</footer>
 {% endblock %}
