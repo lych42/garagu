@@ -23,11 +23,11 @@
       {% for vehicle in vehicles %}
       <div style="justify-content: center; margin: 0 auto;" class="row">
             <div class="col-md-4">
-                <div class="card mb-4 shadow-sm" >
+                <div id="card-vehicule" class="card mb-4 shadow-sm" >
                     <div class="card-body">
                         <h5>{{ vehicle.brand }}</h5>
-                        <p class="card-text">Années :{{ vehicle.year }}</p>
-                        <p class="card-text">Kilomètres :{{ vehicle.mileage }}  </p>
+                        <p class="card-text">Année :{{ vehicle.year }}</p>
+                        <p class="card-text">Kilomètres :{{ vehicle.mileage }}</p>
                     </div>
                 </div>
             </div>
