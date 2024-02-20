@@ -31,6 +31,7 @@ Installez les dépendances en exécutant la commande suivante dans le répertoir
 
 Installez la base de données avec la commande 
 
+    symfony console make:migration
     symfony console d:m:m
 
 Lancer le serveur web 
