@@ -1,19 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello VehiculeController!{% endblock %}
+{% block title %}Véhicules{% endblock %}
 
 {% block body %}
 <header class="main-header">
         <div class="container">
-            <div class="header-left">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo Garage V. Parrot">
-            </div>
+           <h1 style="color: #D9777F">Garage V. Parrot</h1>
             <div class="header-right">
                 <nav>
                     <ul>
-                        <li><a href="#services-section">Services</a></li>
+                        <li><a href="{{ path('homepage') }}">Services</a></li>
                         <li><a href="{{ path('app_vehicule') }}">Véhicules</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="{{ path('app_contact') }}">Contact</a></li>
                         <li><a href="{{ path('app_register') }}">Connexion</a></li>
                     </ul>
                 </nav>
@@ -21,31 +19,26 @@
         </div>
 </header>
 
-<main>
-
+<main >
       {% for vehicle in vehicles %}
-      <div class="row">
+      <div style="justify-content: center; margin: 0 auto;" class="row">
             <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
+                <div class="card mb-4 shadow-sm" >
                     <div class="card-body">
                         <h5>{{ vehicle.brand }}</h5>
                         <p class="card-text">Années :{{ vehicle.year }}</p>
                         <p class="card-text">Kilomètres :{{ vehicle.mileage }}  </p>
-                        <p class="card-text">Prix:{{ vehicle.brand }} EUR</p>
-                        <a href="#" class="btn">Détails</a>
                     </div>
                 </div>
             </div>
       </div>
       {% endfor %}
-
-
 </main>
 
 <footer>
         <div class="container">
             <div class="footer-logo">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo Garage V. Parrot">
+                <h1>Garage V. Parrot</h1>
             </div>
             <div class="footer-address">
                 <p>123 Rue de la Réparation<br>Toulouse</p>
@@ -55,8 +48,7 @@
                 <!-- Afficher les horaires en fonction de votre entité Schedule -->
             </div>
             <div class="footer-contact-form">
-                <h4>Nous Contacter</h4>
-                <!-- Mini formulaire de contact ici -->
+                <h4><a href="{{ path('app_contact') }}">Nous Contacter</a></h4>
             </div>
         </div>
     </footer>
