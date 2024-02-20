@@ -1,4 +1,10 @@
 /* Styles pour l'ensemble' */
+div {
+    margin: 1px;
+    padding: 1px;
+}
+
+
 a:hover {
     text-decoration: none;
     color: #D9777F;
@@ -57,8 +63,8 @@ a:hover {
 }
 
 .services-section .container {
-    max-width: 800px; /* Largeur maximale de la section */
-    margin: 0 auto; /* Centrer la section */
+    max-width: 800px; 
+    margin: 0 auto; 
 }
 
 .service {
@@ -66,18 +72,19 @@ a:hover {
 }
 
 .service h3 {
-    color: #333; /* Couleur du titre */
+    color: #333; 
 }
 
 .service p {
-    color: #666; /* Couleur de la description */
+    color: #666; 
 }
 
 /* Styles pour le footer */
 footer {
-    background-color: #333; /* Couleur de fond du footer */
-    color: #fff; /* Couleur du texte */
+    background-color: #333; 
+    color: #fff; 
     padding: 20px 0;
+    margin: 0 auto;
 }
 
 footer a {

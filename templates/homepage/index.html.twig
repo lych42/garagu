@@ -16,21 +16,19 @@
     {# Header #}
     <header class="main-header">
         <div class="container">
-            <div class="header-left">
-                <p>Garage V. Perrot</p>
-            </div>
+           <h1 style="color: #D9777F">Garage V. Parrot</h1>
             <div class="header-right">
                 <nav>
                     <ul>
                         <li><a href="#services-section">Services</a></li>
                         <li><a href="{{ path('app_vehicule') }}">Véhicules</a></li>
-                        <li><a href="{{ path('app_vehicule') }}">Contact</a></li>
+                        <li><a href="{{ path('app_contact') }}">Contact</a></li>
                         <li><a href="{{ path('app_register') }}">Connexion</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
-    </header>
+</header>
 
     {# Image de voiture #}
     <div class="vitrine">
@@ -39,7 +37,7 @@
 
     {# Services #}
     <div id="services-section">
-        <h2 style="text-align: center">Nos Services</h2>
+        <h2 style="text-align: center; ">Nos différents services</h2>
             <div class="service">
                 {% for service in services %}
                 <h3 style="text-align: center">{{ service.name }}</h3>
