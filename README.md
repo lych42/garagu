@@ -21,7 +21,7 @@ Installation
 
 Voici les étapes à suivre pour lancer l'environnement de développement :
 
-Clonez le dépôt Github de l'application
+Clonez le dépôt Github de l'application (ou téléchrgez le Zip)
 
 Installez les dépendances en exécutant la commande suivante dans le répertoire racine du projet
 
