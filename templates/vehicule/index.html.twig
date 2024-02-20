@@ -38,17 +38,22 @@
 <footer>
         <div class="container">
             <div class="footer-logo">
-                <h1>Garage V. Parrot</h1>
+                <p>Garage V. Parrot</p>
             </div>
             <div class="footer-address">
                 <p>123 Rue de la Réparation<br>Toulouse</p>
             </div>
             <div class="footer-schedule">
                 <h4>Horaires</h4>
-                <!-- Afficher les horaires en fonction de votre entité Schedule -->
+                <ul>
+                  {% for horaire in horaires %}
+                  <li>{{ horaire.jour }} : {{horaire.heureOuverture}} / {{horaire.heureFermeture}}</li>
+                  {% endfor %}
+                </ul>
+
             </div>
             <div class="footer-contact-form">
-                <h4><a href="{{ path('app_contact') }}">Nous Contacter</a></h4>
+                <h4><a href="{{ path('app_contact') }}">Nous Contacter</h4>
             </div>
         </div>
     </footer>

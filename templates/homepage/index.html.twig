@@ -37,7 +37,7 @@
 
     {# Services #}
     <div id="services-section">
-        <h2 style="text-align: center; ">Nos différents services</h2>
+        <h2 style="text-align: center; ">Nos différents services</h2> 
             <div class="service">
                 {% for service in services %}
                 <h3 style="text-align: center">{{ service.name }}</h3>
@@ -48,22 +48,22 @@
 
     {# Véhicules d'occasion #}
     <div style="text-align: center">
-        <button>Voir la liste de nos véhicules d'occasion</button>
+        <button><a style="text-decoration: none; color: #D9777F" href="{{ path('app_vehicule') }}">Voir la liste de nos véhicules d'occasion</a></button>
     </div>
 
     {# Avis #}
     <div class="column" style="text-align: center">
         <div>
-            <h4>Nom de l'utilisateur</h4>
-            <p>ci, on pourra voir les trois derniers commentaires</p>
+            <h4>Avis</h4>
+            <p>Lorem ipsum dolor</p>
         </div>
         <div>
-            <h4>Nom de l'utilisateur</h4>
-           <p> Ici, on pourra voir les trois derniers commentaires</p>
+            <h4>Avis</h4>
+           <p>Lorem ipsum dolor</p>
         </div>
         <div>
-            <h4>Nom de l'utilisateur</h4>
-            <p>Ici, on pourra voir les trois derniers commentaires</p>
+            <h4>Avis</h4>
+            <p>Lorem ipsum dolor</p>
         </div>
     </div>
 
